@@ -339,7 +339,9 @@ exports.forgotPassword = async(req, res)=>{
         const resetToken = await user.generateResetToken();
         await user.save();
 
-        const url = `${req.protocol}://${req.get("host")}/password/reset/${resetToken}`;
+        const url = `${req.protocol}://${req.get(
+            "host"
+          )}/password/reset/${resetPasswordToken}`;
         const msg = `Click on the below link to reset your password : \n\n\n\t\t${url}\n\n\nIf you have not requested this email then please ignore it`;
         try {
             await sendEmail({

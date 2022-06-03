@@ -1,9 +1,13 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
+const path = require("path");
 
 const app = express();
 
-require('dotenv').config({path:'./config/config.env'});
+if(process.env.NODE_ENV !== "production"){
+    require('dotenv').config({path:'./config/config.env'});
+}
+
 
 //using middleware
 app.use(express.json({limit:"50mb"}));
@@ -17,5 +21,12 @@ const userRoute = require('./routes/userRoute');
 //using routes
 app.use('/api/v1', postRoute);
 app.use('/api/v1', userRoute);
+
+// deployment
+app.use(express.static(path.join(__dirname, "/frontend/build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "/frontend/build/index.html"));
+});
 
 module.exports = app;
