@@ -31,6 +31,18 @@ const Posts = ({
     const [captionToggle, setCaptionToggle] = useState(false);
     const [captionValue, setCaptionValue] = useState(caption);
     const {loading} = useSelector(state=>state.likeComment);
+    const [imgDim, setImgDim] = useState("");
+
+    const onImgLoad = ({ target: img }) => {
+        const { offsetHeight, offsetWidth } = img;
+        if(offsetHeight < offsetWidth){
+            setImgDim("higherWidth");
+        }else if(offsetWidth < offsetHeight){
+            setImgDim("higherHeight");
+        }else{
+            setImgDim("equalDim");
+        }
+    };
 
     const handleLike = async() => {
         setLiked(!liked);
@@ -92,7 +104,7 @@ const Posts = ({
         <div className="postDetails">
             <Typography>{caption}</Typography>
             <Link to={`/post/${postId}`}>
-                <img src={postImage} alt="postPic" />
+                <img onLoad={onImgLoad} className={`${imgDim}`} src={postImage} alt="postPic" />
             </Link>
             <button onClick={()=>{setLikeToggle(!likeToggle)}}>
                 <Typography>{likes.length} Likes</Typography>

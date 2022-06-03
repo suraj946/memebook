@@ -32,11 +32,27 @@
 }
 .postDetails > a{
     align-self: center;
+    justify-content: center;
+    display: flex;
     width: 100%;
+    align-items: center;
 }
-.postDetails > a >img{
+
+
+.equalDim{
+    width: 600px;
+    height: 600px;
+}
+.higherWidth{
+    width: 850px;
+}
+.higherHeight{
+    height: 640px;
+
+}
+/* .postDetails > a >img{
     width: 100%;
-}
+} */
 .postDetails > button{
     align-self: self-start;
     background-color: white;
@@ -136,5 +152,15 @@
     }
     .commentForm > input{
         font-size: 3vw;
+    }
+    .higherHeight{
+        height: unset;
+    }
+    .higherWidth{
+        width: 95%;
+    }
+    .equalDim{
+        width: 95vw;
+        height: 95vw;
     }
 }

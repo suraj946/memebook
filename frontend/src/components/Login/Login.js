@@ -4,7 +4,7 @@ import {MailOutline, LockOpen, VisibilityOff, RemoveRedEye} from "@mui/icons-mat
 import{Link} from "react-router-dom";
 import {Button, Typography} from "@mui/material";
 import {useDispatch, useSelector} from "react-redux";
-import { loginUser } from '../../actions/userAction';
+import { getAllUsers, loginUser } from '../../actions/userAction';
 import Loader from "../Loader/Loader";
 import {useSnackbar} from "notistack";
 import MetaData from "../MetaData";
@@ -21,9 +21,10 @@ const Login = () => {
         setOpenEye(!openEye);
     }
 
-    const submitHandler = (e)=>{
+    const submitHandler = async(e)=>{
         e.preventDefault();
-        dispatch(loginUser(email, password));
+        await dispatch(loginUser(email, password));
+        dispatch(getAllUsers());
     }
 
     useEffect(() => {
