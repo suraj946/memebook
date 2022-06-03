@@ -1,0 +1,115 @@
+.allInfoBox{
+    width: 99vw;
+    max-width: 99vw;
+}
+.name{
+    width: 100vw;
+    text-decoration: none;
+}
+.name > button {
+    margin: auto;
+    width: 100%;
+    font-size: 2vmax;
+}
+.flexBox{
+    display: flex;
+    width: 100%;
+}
+.leftBox{
+    width: 70%;
+    max-width: 70%;
+    padding: 1vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+.rightBox{
+    width: 30%;
+    height: 80vh;
+    max-height: 100vh;
+    overflow-y: scroll;
+    padding: 1vmax;
+    border: 1.5px solid rgb(54, 54, 54);
+    border-radius: 10px;
+}
+.rightBox > h6{
+    text-align: center;
+}
+.leftBox > p{
+    padding: 1vmax;
+    font-size: 2vmax;
+    color: #4d4b4a;
+}
+.equalDim{
+    width: 600px;
+    height: 600px;
+}
+.higherWidth{
+    width: 850px;
+}
+.higherHeight{
+    height: 640px;
+
+}
+.picCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: 700px;
+    border-radius: 20px;
+    background-color: #f3f3f3;
+    box-shadow: 3px 3px 10px #9f9c9c;
+}
+.whenNo{
+    padding: 2vmax;
+    text-align: center;
+    color: #8b8787;
+    font-size: 1vmax;
+}
+
+@media screen and (max-width : 600px) {
+    .leftBox{
+        width: 100vw;
+        max-width: unset;
+        height: 70vh;
+    }
+    .flexBox{
+        flex-direction: column;
+    }
+    .picCont{
+        width: 100vw;
+        height: 70vh;   
+        border-radius: 0;
+    }
+    .picCont > p{
+        margin-top: 1vw;
+        font-size: 4vw;
+    }
+    .higherHeight{
+        height: 90%;
+    }
+    .higherWidth{
+        width: 95%;
+    }
+    .equalDim{
+        width: 95vw;
+        height: 95vw;
+    }
+    .rightBox{
+        width: 100vw;
+        border: none;
+        max-height: unset;
+        overflow-y: unset
+    }
+    .commentCard{
+        border-bottom: 2px solid rgb(131, 129, 129);
+    }
+    .name > button{
+        font-size: 5vw;
+        padding: 4vw;
+    }
+}

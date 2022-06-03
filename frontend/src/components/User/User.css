@@ -1,0 +1,31 @@
+.user{
+    margin: 1vmax;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(77, 76, 76);
+    border-radius: 10px;
+    padding: 0.1vmax 1vmax;
+    background-color: rgb(237, 237, 237);   
+    width: 95%;
+    position: relative;
+}
+.user > a{
+    text-decoration: none;
+    color: black;
+}
+.user > a > p{
+    margin: 1vmax;
+}
+.user > button{
+    position: absolute;
+    right: 10px;
+}
+@media screen and (max-width : 600px) {
+    .user{
+        margin: 3vw;
+        padding: 0.2vw 1.5vw;
+    }
+    .user > a > p{
+        margin: 1.7vw;
+    }
+}

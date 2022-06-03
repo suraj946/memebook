@@ -1,0 +1,140 @@
+.post{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 2vmax;
+    padding: 1vmax;
+    border-radius: 10px;
+}
+.ownerDetails{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.ownerDetails > a{
+    text-decoration: none;
+    transform: translateX(1vmax);
+    color: black;
+}
+.ownerDetails > button{
+    position: absolute;
+    right: -1vw;
+    color: black;
+}
+.postDetails{
+    display: flex;
+    flex-direction: column;
+    padding: 1vmax;
+}
+.postDetails > p{
+    font: 200 1vmax Roboto;
+    color: rgb(41, 40, 40);
+    padding: 0.5vmax;
+}
+.postDetails > a{
+    align-self: center;
+    width: 100%;
+}
+.postDetails > a >img{
+    width: 100%;
+}
+.postDetails > button{
+    align-self: self-start;
+    background-color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 0.5vmax;
+}
+.postOption{
+    display: flex;
+    justify-content: space-evenly;
+}
+.postOption > button > svg{
+    font-size: 2vmax;
+    color: rgb(96, 95, 95);
+    transition: all 0.2s;
+}
+.postOption > button > svg:hover{
+    transform: translateY(-3px);
+}
+.dialogBox{
+    position: relative;
+    max-height: 35vmax;
+    min-height: 20vmax;
+    width: 20vmax;
+    overflow-y: auto;
+}
+.toBeFixed{
+    position: fixed;
+    background-color: white;
+    width: 20vmax;
+    box-shadow: 0px 1px 8px grey;
+    padding-bottom: 8px;
+    z-index: 20;
+}
+.toBeFixed > h4{
+    color: #313131;
+    text-align: center;
+}
+.dialogBox h6{
+    color: #807b7b;
+    text-align: center;
+    margin-top: 30%;
+}
+.commentForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.commentForm > input{
+    padding: 0.4vmax 0.7vmax;
+    font-size: 1vmax;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 6px;
+    width: 90%;
+}
+.likeMargin{
+    margin-top: 4vmax;
+}
+.commentMargin{
+    margin-top: 9vmax;
+}
+
+@media screen and (max-width : 600px) {
+    .post{
+        border-radius: 0px;
+        margin-bottom: 0;
+        border-bottom: 1px solid black;
+    }
+    .avatar{
+        height: 11vw !important;
+        width: 11vw !important;
+    }
+    .postDetails > p{
+        font-size: 3.2vw;
+        padding: 1.3vmax;
+    }
+    .postOption > button > svg{
+        font-size: 6vw;
+    }
+    .dialogBox{
+        max-height: 100vw;
+        min-height: 60vw;
+        width: 70vw;
+    }
+    .toBeFixed{
+        width: 70vw;
+    }
+    .likeMargin{
+        margin-top: 13vw;
+    }
+    .commentMargin{
+        margin-top: 30vw;
+    }
+    .commentForm > input{
+        font-size: 3vw;
+    }
+}

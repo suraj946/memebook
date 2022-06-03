@@ -1,0 +1,46 @@
+.commentCard{
+    display: flex;
+    flex-direction: column;
+    padding: 0.7vmax;
+    border-bottom: 1px solid #cfc8c8;
+}
+.userInfo{
+    display: flex;
+    align-items: center;
+}
+.userInfo > div{
+    width: 2vmax;
+    height: 2vmax;
+}
+.userInfo > a{
+    text-decoration: none;
+    padding: 0 0.7vmax;
+    color: #363636;
+}
+.commentBox{
+    display: flex;
+    align-items: center;
+    padding: 0.4vmax 2vmax;
+}
+.commentBox > p{
+    min-width: 90%;
+    width: 90%;
+    word-break: break-word;
+}
+
+@media screen and (max-width : 600px) {
+    .commentCard{
+        padding: 2vw;
+    }
+    .userInfo > div{
+        width: 7vw;
+        height: 7vw;
+    }
+    .commentBox{
+        padding: 3vw 0 0 0;
+    }
+    .commentBox > p{
+        min-width: 77%;
+        width: 77%;
+    }
+}

@@ -1,0 +1,61 @@
+.account{
+    width: 45vw;
+    margin: auto;
+}
+.accountInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d4d4ef;
+    padding: 1vmax;
+}
+.avatarContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.avatarContainer > h5{
+    padding: 0.5vmax;
+}
+.accStatus{
+    display: flex;
+    align-items: center;
+    padding: 1vmax;
+}
+.actions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.actions > div{
+    padding: 0.7vmax;
+}
+.actions > div > a{
+    text-decoration: none;
+    padding: 0.5vmax;
+    font: 400 1vmax Roboto;
+    color: rgb(48, 48, 48);
+    transition: all 0.2s;
+}
+.actions > div > a:hover{
+    background-color: rgb(197, 195, 195);
+}
+.actions > button{
+    margin: 1vmax;
+}
+
+@media screen and (max-width : 600px) {
+    .account{
+        width: 100vw;
+    }
+    .avatarContainer > div{
+        height: 40vw;
+        width: 40vw;
+    }
+    .actions > div{
+        padding: 3vw;
+    }
+    .actions > div > a{
+        font-size: 4vw;
+    }
+}
