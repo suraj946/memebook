@@ -39,14 +39,14 @@
 }
 
 
-.equalDim{
+.EE{
     width: 600px;
     height: 600px;
 }
-.higherWidth{
+.HW{
     width: 850px;
 }
-.higherHeight{
+.HH{
     height: 640px;
 
 }
@@ -153,13 +153,13 @@
     .commentForm > input{
         font-size: 3vw;
     }
-    .higherHeight{
+    /* .HH{
         height: unset;
-    }
-    .higherWidth{
+    } */
+    .HW{
         width: 95%;
     }
-    .equalDim{
+    .EE{
         width: 95vw;
         height: 95vw;
     }

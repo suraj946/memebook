@@ -36,11 +36,11 @@ const Posts = ({
     const onImgLoad = ({ target: img }) => {
         const { offsetHeight, offsetWidth } = img;
         if(offsetHeight < offsetWidth){
-            setImgDim("higherWidth");
+            setImgDim("HW");
         }else if(offsetWidth < offsetHeight){
-            setImgDim("higherHeight");
+            setImgDim("HH");
         }else{
-            setImgDim("equalDim");
+            setImgDim("EE");
         }
     };
 
