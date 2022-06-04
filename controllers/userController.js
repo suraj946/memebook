@@ -341,7 +341,7 @@ exports.forgotPassword = async(req, res)=>{
 
         const url = `${req.protocol}://${req.get(
             "host"
-          )}/password/reset/${resetPasswordToken}`;
+          )}/password/reset/${resetToken}`;
         const msg = `Click on the below link to reset your password : \n\n\n\t\t${url}\n\n\nIf you have not requested this email then please ignore it`;
         try {
             await sendEmail({
