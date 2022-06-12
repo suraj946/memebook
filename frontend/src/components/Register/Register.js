@@ -4,7 +4,7 @@ import {MailOutline, LockOpen, VisibilityOff, RemoveRedEye, Face} from "@mui/ico
 import{Link, useNavigate} from "react-router-dom";
 import {Avatar, Button, Typography} from "@mui/material";
 import {useDispatch, useSelector} from "react-redux";
-import { registerUser } from '../../actions/userAction';
+import { getAllUsers, registerUser } from '../../actions/userAction';
 import Loader from "../Loader/Loader";
 import {useSnackbar} from "notistack";
 import MetaData from "../MetaData";
@@ -35,9 +35,10 @@ const Register = () => {
         Reader.readAsDataURL (file);
     }
 
-    const submitHandler = (e)=>{
+    const submitHandler = async(e)=>{
         e.preventDefault();
-        dispatch(registerUser(name, avatar, email, password));
+        await dispatch(registerUser(name, avatar, email, password));
+        dispatch(getAllUsers());
         navigate("/");
     }
 
