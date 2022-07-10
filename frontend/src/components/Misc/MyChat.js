@@ -84,11 +84,15 @@ const MyChat = ({fetchAgain}) => {
 
   useEffect(() => {
    dispatch(getAllChats());
-   if(error){
+  }, [dispatch, fetchAgain]);
+
+  useEffect(() => {
+    if(error){
       enqueueSnackbar(error, {variant:"error"});
       dispatch({type:"clearError"});
    }
-  }, [dispatch, enqueueSnackbar, error, fetchAgain]);
+  }, [dispatch, error, enqueueSnackbar])
+  
   
   return (
     <div className={`allChatList ${selectedChat ? "NTX" : "UTX"}`}>

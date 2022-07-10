@@ -2,7 +2,7 @@ import {createReducer} from "@reduxjs/toolkit";
 
 const initialState = {};
 
-export const allChatsReducer = createReducer(initialState, {
+export const allChatsReducer = createReducer({allChats:[]}, {
     allChatsRequest:(state)=>{
         state.loading = true;
     },
