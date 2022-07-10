@@ -10,7 +10,7 @@ import {useSnackbar} from "notistack";
 import MessageComponent from "./MessageComponent.js";
 import io from "socket.io-client";
 
-const ENDPOINT = "http://smemebook.herokuapp.com";
+const ENDPOINT = "http://localhost:4000";
 let socket, selectedChatCompare;
 
 const SingleChat = ({fetchAgain, setFetchAgain}) => {
@@ -27,7 +27,7 @@ const SingleChat = ({fetchAgain, setFetchAgain}) => {
     const {notification} = useSelector(state=>state.notification);
 
     useEffect(() => {
-        socket = io(ENDPOINT);
+        socket = io(ENDPOINT, {transports:['websocket']});
         socket.emit("setup", user);
         socket.on("connected", ()=>setSocketConnected(true));
         socket.on("typing", ()=>setIsTyping(true));
