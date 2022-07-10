@@ -9,7 +9,9 @@ import {
     Search,
     SearchOutlined,
     AccountCircle,
-    AccountCircleOutlined     
+    AccountCircleOutlined,
+    MailOutlined,
+    Mail
 } from "@mui/icons-material";
 
 const Header = () => {
@@ -17,18 +19,23 @@ const Header = () => {
   return (
     <Fragment>
         <div className='header'>
-            <Link to="/" onClick={()=>{setTab("/")}}>
-                {tab === "/" ? <Home style={{color:"black"}}/> : <HomeOutlined/>}
-            </Link>
-            <Link to="/newpost" onClick={()=>{setTab("/newpost")}}>
-                {tab === "/newpost" ? <Add style={{color:"black"}}/> : <AddOutlined/>}
-            </Link>
-            <Link to="/search" onClick={()=>{setTab("/search")}}>
-                {tab === "/search" ? <Search style={{color:"black"}}/> : <SearchOutlined/>}
-            </Link>
-            <Link to="/account" onClick={()=>{setTab("/account")}}>
-                {tab === "/account" ? <AccountCircle style={{color:"black"}}/> : <AccountCircleOutlined/>}
-            </Link>
+            <div className="links">
+                <Link to="/" onClick={()=>{setTab("/")}}>
+                    {tab === "/" ? <Home style={{color:"black"}}/> : <HomeOutlined/>}
+                </Link>
+                <Link to="/newpost" onClick={()=>{setTab("/newpost")}}>
+                    {tab === "/newpost" ? <Add style={{color:"black"}}/> : <AddOutlined/>}
+                </Link>
+                <Link to="/chats" onClick={()=>{setTab("/chats")}}>
+                    {tab === "/chats" ? <Mail style={{color:"black"}}/> : <MailOutlined/>}
+                </Link>
+                <Link to="/search" onClick={()=>{setTab("/search")}}>
+                    {tab === "/search" ? <Search style={{color:"black"}}/> : <SearchOutlined/>}
+                </Link>
+                <Link to="/account" onClick={()=>{setTab("/account")}}>
+                    {tab === "/account" ? <AccountCircle style={{color:"black"}}/> : <AccountCircleOutlined/>}
+                </Link>
+            </div>
         </div>
         <div className='forMargin'></div>
     </Fragment>

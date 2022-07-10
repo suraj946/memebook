@@ -16,6 +16,7 @@ import ResetPassword from './components/ResetPassword/ResetPassword';
 import UserProfile from './components/UserProfile/UserProfile';
 import Search from './components/Search/Search';
 import PostDetail from './components/PostDetail/PostDetail';
+import Chats from './components/Chats/Chats';
 
 function App() {
   const dispatch = useDispatch();
@@ -34,6 +35,7 @@ function App() {
           <Route exact path='/register' element={isAuthenticated ? <Home/> : <Register/>} />
           <Route exact path='/account' element={isAuthenticated ? <Account/> : <Login/>} />
           <Route exact path='/newpost' element={isAuthenticated ? <NewPost/> : <Login/>} />
+          <Route exact path='/chats' element={isAuthenticated ? <Chats/> : <Login/>} />
           <Route exact path='/update/profile' element={isAuthenticated ? <UpdateProfile/> : <Login/>} />
           <Route exact path='/update/password' element={isAuthenticated ? <UpdatePassword/> : <Login/>} />
           <Route exact path='/forgot/password' element={isAuthenticated ? <UpdatePassword/> : <ForgotPassword/>} />

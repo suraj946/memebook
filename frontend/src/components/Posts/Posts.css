@@ -40,15 +40,14 @@
 
 
 .EE{
-    width: 600px;
-    height: 600px;
+    width: 85%;
+    height: 85%;
 }
 .HW{
-    width: 850px;
+    width: 85%;
 }
 .HH{
-    height: 640px;
-
+    width: 80%;
 }
 /* .postDetails > a >img{
     width: 100%;
@@ -153,9 +152,10 @@
     .commentForm > input{
         font-size: 3vw;
     }
-    /* .HH{
+    .HH{
+        width: 90%;
         height: unset;
-    } */
+    }
     .HW{
         width: 95%;
     }

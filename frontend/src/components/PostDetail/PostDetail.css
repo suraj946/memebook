@@ -43,14 +43,14 @@
     color: #4d4b4a;
 }
 .equalDim{
-    width: 600px;
-    height: 600px;
+    width: 80%;
+    height: 80%;
 }
 .higherWidth{
-    width: 850px;
+    width: 70%;
 }
 .higherHeight{
-    height: 640px;
+    height: 70%;
 
 }
 .picCont{
@@ -90,14 +90,14 @@
         font-size: 4vw;
     }
     .higherHeight{
-        height: 90%;
+        height: 80%;
     }
     .higherWidth{
-        width: 95%;
+        width: 80%;
     }
     .equalDim{
-        width: 95vw;
-        height: 95vw;
+        width: 80%;
+        height: 80%;
     }
     .rightBox{
         width: 100vw;

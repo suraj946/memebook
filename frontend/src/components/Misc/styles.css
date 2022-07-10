@@ -1,0 +1,318 @@
+.sideDrawer{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(253 251 251);
+    padding: 7px 0;
+    color: #877c7c;
+    border-radius: 5px;
+}
+.drawerSvg{
+    font: 800 30px Roboto;
+    cursor: pointer;
+}
+.MuiDrawer-paper{
+    width: 400px;
+    padding: 1vmax;
+}
+.searchInput{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchInput > button > svg{
+    font-size: 41px;
+    padding: 0 5px;
+}
+.searchResultBox{
+    margin: 22px;
+}
+.userList{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+    background-color: #dbdbdb;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.userList > p{
+    margin: 0 10px;
+}
+.userList:hover{
+    background-color: #5db2ab;
+    color: white;
+}
+.allChatList{
+    background-color: white;
+    width: 40%;
+    max-width: 40%;
+    margin: 5px 0;
+    height: 83vh;
+    border-radius: 5px;
+    padding: 10px;
+}
+.chatListHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.stack{
+    margin: 20px 0;
+    overflow-y: scroll;
+}
+.allChats{
+    padding: 2px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.allChats:hover{
+    background-color: #2ca810 !important;
+    color: white !important;
+}
+.modalBox{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: white;
+    box-shadow: 4px 2px 18px #4c4c4c;
+    padding: 10px;
+    border-radius: 5px;
+}
+.modalHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+.modalHeader > svg{
+    cursor: pointer;
+    font-size: 30px;
+    transition: all 0.2s;
+}
+.modalHeader > svg:hover{
+    color: rgb(33, 185, 245);
+}
+.modalInputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modalInputs > div{
+    width: 90%;
+    margin: 10px;
+}
+.userAddedBox{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 15px;
+}
+.badge{
+    background-color: rgb(9, 13, 241);
+    color: white;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+.badge > svg{
+    font-size: 20px;
+}
+
+.chatBox{
+    width: 60%;
+    max-width: 60%;
+    margin: 5px 0;
+    height: 83vh;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.singleChatHeader{
+    background-color: #f5efef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+.singleChatHeader > button{
+    display: none;
+}
+
+.singleChatHeader > p{
+    font: 400 20px Roboto;
+}
+.messageBox{
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 93%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    justify-content: flex-end;
+    border-radius: 5px;
+}
+.sendMessageForm{
+    /* background-color: grey; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+.sendMessageForm > input{
+    width: 83%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    font: 400 17px Roboto;
+    outline: none;
+}
+.allMessagesBox{
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.messageCompMe, .messageComp{
+    display: flex;
+    align-items: flex-start;
+    margin: 5px 0;
+    width: 100%;
+}
+.messageCompMe{
+    align-self: flex-end;
+    justify-content: flex-end
+}
+.messageCompMe > span{
+    max-width: 75%;
+    background-color: #3f3cf0;
+    color: #ffffff;
+    border-radius: 40px 0 40px 40px;
+    padding: 5px 20px 12px 15px;
+    font: 400 18px Roboto;
+    margin: 4px 0px 0px 4px;
+}
+.messageComp > span{
+    max-width: 75%;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 0 40px 40px 40px;
+    padding: 5px 20px 12px 15px;
+    font: 400 18px Roboto;
+    margin: 4px 0px 0px 4px;
+}
+.typingIndicator{
+    font: 400 15px Roboto;
+    color: green;
+}
+.latestMessageSpan{
+    font: 400 13px Roboto;
+    color: #28681d;
+}
+
+@media screen and (max-width : 600px) {
+    .MuiDrawer-paper{
+        width: 80vw;
+        padding: 10px;
+    }
+    .searchResultBox{
+        margin: 5px;
+    }
+    .userList{
+        width: 70vw;
+    }
+    .singleChatHeader{
+        padding: 0;
+        justify-content: space-around !important;
+    }
+    .singleChatHeader > button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .allChatList{
+        width: 100%;
+        max-width: 100%;
+        position: absolute;
+        height: 88.2vh;
+        max-height: 88.2vh;
+        transition: all 0.2s;
+    }
+    .chatBox{
+        width: 100%;
+        max-width: 100%;
+        position: absolute;   
+        transition: all 0.2s;
+        margin: 0;
+        margin-top: 5px;
+        padding: 0;
+    }
+    .TX{
+        transform: translateX(600px);
+    }
+    .NTX{
+        transform: translateX(-600px);
+    }
+    .UTX{
+        transform: translateX(0px);
+    }
+    .hidebar{
+        display: none;
+    }
+    .chatListHeader > h5{
+        font-size: 20px;
+    }
+    .chatListHeader > button > svg{
+        font-size: 25px;
+    }
+    .allChats > p{
+        font-size: 18px;
+    }
+    .drawerSvg{
+        font-size: 20px !important;
+    }
+    .drawerHead{
+        display: none;
+    }
+    .messageBox{
+        margin: 0;
+        padding: 0 10px;
+        padding-bottom: 10px;
+        height: 100%;
+    }
+    .allMessagesBox{
+        height: unset;
+    }
+    .messageComp > span{
+        font-size: 13px;
+    }
+    .messageCompMe > span{
+        font-size: 13px;
+    }
+    .sendMessageForm{
+        padding: 5px;
+    }
+    .sendMessageForm > input{
+        font-size: 13px;
+        height: 37px;
+        padding: 10px;
+    }
+    .modalBox{
+        width: 85vw;
+    }
+}

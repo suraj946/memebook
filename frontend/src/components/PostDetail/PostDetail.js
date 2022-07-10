@@ -35,8 +35,8 @@ const PostDetail = () => {
 
     const getTime = ()=>{
       let date = new Date(singlePost.createdAt);
-      let currDate = new Date();
-      let diffInMinute = Math.round((currDate.valueOf()-date.valueOf())/60000);
+      let currDate = Date.now();
+      let diffInMinute = Math.round((currDate-date.valueOf())/60000);
       if(diffInMinute < 60){
         setTime(`${diffInMinute} minutes ago`);
       }else if(diffInMinute > 60 && diffInMinute <= 1440){

@@ -6,3 +6,16 @@
 body{
     background-image: linear-gradient(to right, rgb(174, 216, 119), rgb(161, 207, 245));
 }
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.281);
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

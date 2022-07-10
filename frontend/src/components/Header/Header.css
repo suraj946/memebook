@@ -1,4 +1,4 @@
-.header{
+.links{
     display: flex;
     justify-content: center;
     box-shadow: 0px 1px 3px #747373;
@@ -8,17 +8,17 @@
     background-image: linear-gradient(to right, rgb(174, 216, 119), rgb(161, 207, 245));
     z-index: 10;
 }
-.header > a{
+.links > a{
     margin: 0vmax 4vmax;
     margin-top: 1vmax;
     text-decoration: none;
 }
-.header > a > svg{
+.links > a > svg{
     font-size: 2.5vmax;
     color: rgb(112, 109, 109);
     transition: all 0.2s;
 }
-.header > a > svg:hover{
+.links > a > svg:hover{
     transform: scale(1.1);
     color: black;
 }
@@ -27,14 +27,14 @@
 }
 
 @media screen and (max-width:600px) {
-    .header{
+    .links{
         justify-content: space-evenly;
     }
-    .header > a{
-        margin: 0 7vw;
+    .links > a{
+        margin: 0 6vw;
         margin-top: 3.5vw;
     }
-    .header > a > svg{
+    .links > a > svg{
         font-size: 9vw;
     }
     .forMargin{

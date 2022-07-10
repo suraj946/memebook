@@ -1,0 +1,23 @@
+.chatPage{
+    /* background-color: red; */
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.chatsCont{
+    display: flex;
+}
+
+@media screen and (max-width : 600px) {
+    .chatPage{
+        width: 100%;
+        height: 90vh;
+    }
+    .chatsCont{
+        position: relative;
+        width: 100vw;
+        height: 88vh;
+        overflow: hidden;
+    }
+}

@@ -8,6 +8,7 @@ import {
     userReducer
 } from "./reducers/userReducer";
 import {likeCommentReducer, singlePostReducer} from "./reducers/postReducer";
+import { allChatsReducer, notificationReducer, selectedChatReducer } from "./reducers/chatReducer";
 
 // const initialState = {};
 
@@ -20,7 +21,10 @@ const store = configureStore({
         myPosts:myPostsReducer,
         userPosts:userPostsReducer,
         userProfile:userProfileReducer,
-        singlePost:singlePostReducer
+        singlePost:singlePostReducer,
+        allChats:allChatsReducer,
+        selectedChat:selectedChatReducer,
+        notification:notificationReducer
     }
 });
 

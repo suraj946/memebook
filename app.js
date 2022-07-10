@@ -17,16 +17,22 @@ app.use(cookieParser());
 //importing routes
 const postRoute = require('./routes/postRoute');
 const userRoute = require('./routes/userRoute');
+const chatRoute = require('./routes/chatRoute');
+const messageRoute = require('./routes/messageRoute');
 
 //using routes
 app.use('/api/v1', postRoute);
 app.use('/api/v1', userRoute);
+app.use('/api/v1', chatRoute);
+app.use('/api/v1', messageRoute);
 
 // deployment
-app.use(express.static(path.join(__dirname, "/frontend/build")));
+if(process.env.NODE_ENV === "production"){
+  app.use(express.static(path.join(__dirname, "/frontend/build")));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
-});
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+  });
+}
 
 module.exports = app;

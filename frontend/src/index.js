@@ -8,15 +8,13 @@ import {HelmetProvider} from "react-helmet-async";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <React.StrictMode>
-    <HelmetProvider>
-      <Provider store={store}>
-        <SnackbarProvider maxSnack={1}>
-          <App />
-        </SnackbarProvider>
-      </Provider>
-    </HelmetProvider>
-  </React.StrictMode>
+  <HelmetProvider>
+    <Provider store={store}>
+      <SnackbarProvider maxSnack={1}>
+        <App />
+      </SnackbarProvider>
+    </Provider>
+  </HelmetProvider>
 );
 
 
