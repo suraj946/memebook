@@ -4,10 +4,12 @@ const path = require("path");
 
 const app = express();
 
-if(process.env.NODE_ENV !== "production"){
-    require('dotenv').config({path:'./config/config.env'});
-}
+//when using heroku
+// if(process.env.NODE_ENV !== "production"){
+//     require('dotenv').config({path:'./config/config.env'});
+// }
 
+require('dotenv').config({path:'./config/config.env'});
 
 //using middleware
 app.use(express.json({limit:"50mb"}));
