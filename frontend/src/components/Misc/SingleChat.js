@@ -10,7 +10,7 @@ import {useSnackbar} from "notistack";
 import MessageComponent from "./MessageComponent.js";
 import io from "socket.io-client";
 
-const ENDPOINT = "https://smemebook.herokuapp.com";
+const ENDPOINT = "https://memebook.onrender.com";
 let socket, selectedChatCompare;
 
 const SingleChat = ({fetchAgain, setFetchAgain}) => {
